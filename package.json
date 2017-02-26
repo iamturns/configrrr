@@ -1,0 +1,44 @@
+{
+  "name": "configrrr",
+  "version": "1.0.0",
+  "description": "Angry configuration for your JS",
+  "keywords": [
+    "config",
+    "configuration",
+    "settings",
+    "environment"
+  ],
+  "main": "index.js",
+  "module": "src/index.js",
+  "author": "Matthew Turnbull <turnbullm@gmail.com> (http://turnbullm.com)",
+  "license": "MIT",
+  "homepage": "https://github.com/turnbullm/configrrr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/turnbullm/configrrr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/turnbullm/configrrr/issues"
+  },
+  "engines": {
+    "node": ">= 6.9.5"
+  },
+  "scripts": {
+    "build": "yarn run rollup && yarn run rollup:min && yarn run size",
+    "rollup": "rollup --config rollup.config.js",
+    "rollup:min": "rollup --config rollup.config.min.js",
+    "start": "yarn run rollup -- --watch",
+    "size": "js-size index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "babel-core": "6.23.1",
+    "babel-plugin-external-helpers": "6.22.0",
+    "babel-preset-es2015": "6.22.0",
+    "js-size": "2.0.0",
+    "rollup": "0.41.4",
+    "rollup-plugin-babel": "2.7.1",
+    "rollup-plugin-uglify": "1.0.1",
+    "rollup-watch": "3.2.2"
+  }
+}
