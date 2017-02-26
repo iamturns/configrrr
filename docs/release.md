@@ -41,12 +41,6 @@ git add -A
 git commit -m ":arrow_double_up: Prepare v0.0.0"
 ```
 
-## Test
-
-```
-yarn run verify
-```
-
 ## Finish & publish
 
 ```

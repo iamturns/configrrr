@@ -12,6 +12,17 @@
   "module": "src/index.js",
   "author": "Matthew Turnbull <turnbullm@gmail.com> (http://turnbullm.com)",
   "license": "MIT",
+  "homepage": "https://github.com/turnbullm/configrrr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/turnbullm/configrrr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/turnbullm/configrrr/issues"
+  },
+  "engines": {
+    "node": ">= 6.9.5"
+  },
   "scripts": {
     "build": "yarn run rollup && yarn run rollup:min && yarn run size",
     "rollup": "rollup --config rollup.config.js",
