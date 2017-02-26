@@ -1,4 +1,4 @@
-# Configrrr <sup>v1.0.0</sup>
+# Configrrr <sup>v1.0.0-dev</sup>
 
 - :angry: Angry configuration for your JS (grrr...)
 - :muscle: Powerful and simple
