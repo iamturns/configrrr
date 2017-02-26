@@ -34,6 +34,7 @@ git flow release start v0.0.0
 	- Change the 'Unreleased' heading to the new version number and release date
 - `/README.md`:
 	- Update version number on first line (and remove any `-dev` suffix)
+	- Update file size from previous `build` output
 - `/package.json`:
 	- Update version number (and remove any `-dev` suffix)
 
