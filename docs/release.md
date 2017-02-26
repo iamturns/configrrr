@@ -29,6 +29,7 @@ git flow release start v0.0.0
 
 ## Code updates
 
+- `yarn run build`
 - `/CHANGELOG.md`:
 	- Change the 'Unreleased' heading to the new version number and release date
 - `/README.md`:
@@ -50,15 +51,9 @@ git flow release finish v0.0.0
 git push --tags
 git checkout master
 git push
+npm publish
 git checkout develop
 git push
-```
-
-## Publish to NPM
-
-```
-git checkout v0.0.0
-npm publish
 ```
 
 ## Reset develop branch
