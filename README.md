@@ -1,11 +1,8 @@
 # Configrrr <sup>v1.0.0</sup>
 
-:angry: Angry configuration for your JS
-
+- :angry: Angry configuration for your JS (grrr...)
 - :muscle: Powerful and simple
-	- :white_check_mark: Environment variables
-	- :white_check_mark: Command switches
-	- :white_check_mark: Local storage overrides
+	- :white_check_mark: Supports environment variables, command switches, and local storage overrides
 - :baby_chick: Light: no dependencies, 846 bytes (minified + gzip)
 
 # Installation

@@ -13,21 +13,21 @@
   "author": "Matthew Turnbull <turnbullm@gmail.com> (http://turnbullm.com)",
   "license": "MIT",
   "scripts": {
-    "build": "npm run rollup && npm run rollup:min && npm run size",
+    "build": "yarn run rollup && yarn run rollup:min && yarn run size",
     "rollup": "rollup --config rollup.config.js",
     "rollup:min": "rollup --config rollup.config.min.js",
-    "start": "npm run rollup -- --watch",
+    "start": "yarn run rollup -- --watch",
     "size": "js-size index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "babel-core": "^6.23.1",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-es2015": "^6.22.0",
-    "js-size": "^2.0.0",
-    "rollup": "^0.41.4",
-    "rollup-plugin-babel": "^2.7.1",
-    "rollup-plugin-uglify": "^1.0.1",
-    "rollup-watch": "^3.2.2"
+    "babel-core": "6.23.1",
+    "babel-plugin-external-helpers": "6.22.0",
+    "babel-preset-es2015": "6.22.0",
+    "js-size": "2.0.0",
+    "rollup": "0.41.4",
+    "rollup-plugin-babel": "2.7.1",
+    "rollup-plugin-uglify": "1.0.1",
+    "rollup-watch": "3.2.2"
   }
 }
