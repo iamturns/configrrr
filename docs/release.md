@@ -29,10 +29,12 @@ git flow release start v0.0.0
 
 ## Code updates
 
+- `yarn run build`
 - `/CHANGELOG.md`:
 	- Change the 'Unreleased' heading to the new version number and release date
 - `/README.md`:
 	- Update version number on first line (and remove any `-dev` suffix)
+	- Update file size from previous `build` output
 - `/package.json`:
 	- Update version number (and remove any `-dev` suffix)
 
@@ -45,10 +47,12 @@ git commit -m ":arrow_double_up: Prepare v0.0.0"
 
 ```
 git flow release finish v0.0.0
-# Git commit message = :boom: v0.0.0
+# Merge message = :boom: v0.0.0
+# Tag message = :bookmark: v0.0.0
 git push --tags
 git checkout master
 git push
+npm publish
 git checkout develop
 git push
 ```
