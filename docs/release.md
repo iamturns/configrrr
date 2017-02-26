@@ -45,12 +45,20 @@ git commit -m ":arrow_double_up: Prepare v0.0.0"
 
 ```
 git flow release finish v0.0.0
-# Git commit message = :boom: v0.0.0
+# Merge message = :boom: v0.0.0
+# Tag message = :bookmark: v0.0.0
 git push --tags
 git checkout master
 git push
 git checkout develop
 git push
+```
+
+## Publish to NPM
+
+```
+git checkout v0.0.0
+npm publish
 ```
 
 ## Reset develop branch
