@@ -1,8 +1,7 @@
 # Configrrr <sup>v1.0.2-dev</sup>
 
-:angry: Angry configuration for your JS (grrr...)
-
-- :muscle: Automatically override your config with environment variables, command line switches, and local storage
+- :angry: Angry configuration for your JS (grrr...)
+- :muscle: Automatically overrides your config values with environment variables, command line switches, and local storage
 - :timer_clock: Simple setup, minimal configuration
 - :hatched_chick: No dependencies, 846 bytes (minified + gzip)
 
