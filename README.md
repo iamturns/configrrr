@@ -163,6 +163,3 @@ console.log(config.apiUrl);
 # License
 
 Open sourced under the [MIT license](http://turnbullm.mit-license.org/).
-
-[npm-badge]: https://img.shields.io/npm/v/configrrr.svg
-[npm-badge-url]: https://www.npmjs.com/package/configrrr
