@@ -137,6 +137,9 @@ console.log(config.API_URL);
 # Roadmap
 
 - Unit tests
+- Improve boolean switches (`--example` instead of `--example true`)
+- TypeScript definition files
+- Support `npm config` settings
 
 # Notes
 
