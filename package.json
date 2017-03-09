@@ -9,7 +9,7 @@
     "environment"
   ],
   "main": "index.js",
-  "module": "src/index.js",
+  "module": "index.js",
   "author": "Matthew Turnbull <turnbullm@gmail.com> (http://turnbullm.com)",
   "license": "MIT",
   "homepage": "https://github.com/turnbullm/configrrr",
