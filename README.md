@@ -1,8 +1,11 @@
-# Configrrr <sup>v1.0.2</sup>
+# Configrrr <sup>v1.0.3</sup>
 
-- :muscle: Powerful and simple
-	- :white_check_mark: Supports environment variables, command switches, and local storage overrides
-- :baby_chick: Light: no dependencies, 846 bytes (minified + gzip)
+:angry: Angry configuration for your JS (grrr...)
+
+Automatically overrides your config values with environment variables, command line switches, and local storage.
+
+- :timer_clock: Simple setup, minimal configuration
+- :hatched_chick: No dependencies, 846 bytes (minified + gzip)
 
 # Installation
 
@@ -16,57 +19,57 @@ npm install configrrr
 import { Config } from 'configrrr';
 
 const config = new Config({
-	APP_NAME: 'Example',
-	ANGRY: false,
-	PORT_NUMBER: 3000,
+	appName: 'Example',
+	angry: false,
+	portNumber: 3000,
 });
 ```
 
 ```javascript
 // Override with an environment variable
-env ANGRY=true npm start
+env angry=true npm start
 
 // Override with a command switch
-npm start --ANGRY true
+npm start --angry true
 
 // Override 'on the fly' within the browser
-localStorage.ANGRY = true;
+localStorage.angry = true;
 
 // Override by hard coding
-config.ANGRY = true;
+config.angry = true;
 ```
 
 ```javascript
-console.log(config.ANGRY);
+console.log(config.angry);
 // true
 
 console.log(config.toJSON());
-// { APP_NAME: 'Example', ANGRY: true, PORT_NUMBER: 3000 }
+// { appName: 'Example', angry: true, portNumber: 3000 }
 
-console.log(config.hasOwnProperty('DOES_NOT_EXIST'));
+console.log(config.hasOwnProperty('doesNotExist'));
 // false
 
 console.log(config.keys);
-// [ 'APP_NAME', 'ANGRY', 'PORT_NUMBER' ]
+// [ 'appName', 'angry', 'portNumber' ]
 ```
 
 ## Config override priority
 
 ```javascript
 // #1. Hard coded
-config.ANGRY = '1st priority';
+config.angry = '1st priority';
 
 // #2. Local storage
-localStorage.ANGRY = '2nd priority';
+localStorage.angry = '2nd priority';
 
 // #3. Command switch
-npm start --ANGRY '3rd priority'
+npm start --angry '3rd priority'
 
 // #4. Environment variable
-env ANGRY='4th priority' npm start
+env angry='4th priority' npm start
 
 // #5. Initial config
-new Config({ ANGRY: '5th priority' })
+new Config({ angry: '5th priority' })
 ```
 
 ## Usage without ES6 module support
@@ -74,15 +77,15 @@ new Config({ ANGRY: '5th priority' })
 ```javascript
 // CommonJS / Node.js
 const configrrr = require('configrrr');
-const config = new configrrr.Config({ TEST: true });
+const config = new configrrr.Config({ test: true });
 
 // AMD / RequireJS 
 define(['configrrr'], function(configrrr) {
-	const config = new configrrr.Config({ TEST: true });
+	const config = new configrrr.Config({ test: true });
 });
 
 // Global / window
-const config = new configrrr.Config({ TEST: true });
+const config = new configrrr.Config({ test: true });
 ```
 
 # Use Case: Layered environment config files
@@ -97,16 +100,16 @@ Provide the following directory structure:
 
 ```javascript
 // /app/config/config.default.js
-module.exports = { API_URL: undefined };
+module.exports = { apiUrl: undefined };
 
 // /app/config/config.env-dev.js
-module.exports = { API_URL: 'http://dev.example.com/' };
+module.exports = { apiUrl: 'http://dev.example.com/' };
 
 // /app/config/config.env-prod.js
-module.exports = { API_URL: 'http://api.example.com/' };
+module.exports = { apiUrl: 'http://api.example.com/' };
 
 // /app-config.local.js
-module.exports = { API_URL: 'http://localhost:1234/' };
+module.exports = { apiUrl: 'http://localhost:1234/' };
 ```
 
 ```javascript
@@ -131,12 +134,15 @@ export const config = new Config(initConfig);
 
 import { config } from '/app/config/';
 
-console.log(config.API_URL);
+console.log(config.apiUrl);
 ```
 
 # Roadmap
 
 - Unit tests
+- Improve boolean switches (`--example` instead of `--example true`)
+- TypeScript definition files
+- Support `npm config` settings
 
 # Notes
 
@@ -157,6 +163,3 @@ console.log(config.API_URL);
 # License
 
 Open sourced under the [MIT license](http://turnbullm.mit-license.org/).
-
-[npm-badge]: https://img.shields.io/npm/v/configrrr.svg
-[npm-badge-url]: https://www.npmjs.com/package/configrrr
