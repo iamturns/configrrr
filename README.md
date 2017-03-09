@@ -1,4 +1,4 @@
-# Configrrr <sup>v1.0.2</sup>
+# Configrrr <sup>v1.0.2-dev</sup>
 
 - :muscle: Powerful and simple
 	- :white_check_mark: Supports environment variables, command switches, and local storage overrides
