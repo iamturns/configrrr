@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).  
 This file adheres to [Keep a CHANGELOG](http://keepachangelog.com/).
 
+# 1.0.4 - 2017-04-12
+
+- :fire: Remove strict node version requirement
+
 # 1.0.3 - 2017-03-09
 
 - :art: :memo: Improve documenation
