@@ -1,4 +1,4 @@
-# Configrrr <sup>v1.0.3</sup>
+# Configrrr <sup>v1.0.4</sup>
 
 :angry: Angry configuration for your JS (grrr...)
 
@@ -137,13 +137,6 @@ import { config } from '/app/config/';
 console.log(config.apiUrl);
 ```
 
-# Roadmap
-
-- Unit tests
-- Improve boolean switches (`--example` instead of `--example true`)
-- TypeScript definition files
-- Support `npm config` settings
-
 # Notes
 
 - Config supports key value pairs only
@@ -155,6 +148,13 @@ console.log(config.apiUrl);
 - [Change log](CHANGELOG.md)
 - [Develop](docs/develop.md)
 - [Release](docs/release.md)
+
+# Roadmap
+
+- Unit tests
+- Improve boolean switches (`--example` instead of `--example true`)
+- TypeScript definition files
+- Support `npm config` settings
 
 # Author
 
