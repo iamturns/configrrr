@@ -19,9 +19,6 @@
   "bugs": {
     "url": "https://github.com/turnbullm/configrrr/issues"
   },
-  "engines": {
-    "node": ">= 6.9.5"
-  },
   "scripts": {
     "build": "yarn run rollup && yarn run rollup:min && yarn run size",
     "rollup": "rollup --config rollup.config.js",
