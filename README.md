@@ -1,4 +1,4 @@
-# Configrrr <sup>v1.0.4</sup>
+# Configrrr <sup>v1.0.4-dev</sup>
 
 :angry: Angry configuration for your JS (grrr...)
 
