@@ -93,6 +93,9 @@ var Config = function () {
 		classCallCheck(this, Config);
 
 		this.keys = Object.keys(initConfig);
+		this.keysSafePrefix = this.keys.map(function (k) {
+			return 'CONFIG_' + k;
+		});
 		this._baseConfig = this._calculateBaseConfig(initConfig);
 		this._setConfig = {};
 		this._defineProperties();
@@ -111,7 +114,7 @@ var Config = function () {
 	}, {
 		key: '_calculateBaseConfig',
 		value: function _calculateBaseConfig(initConfig) {
-			return Object.assign({}, initConfig, getEnvVars(this.keys), getArgVals(this.keys));
+			return Object.assign({}, initConfig, getEnvVars(this.keysSafePrefix), getArgVals(this.keysSafePrefix));
 		}
 	}, {
 		key: '_defineProperties',
