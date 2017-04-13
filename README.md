@@ -1,11 +1,11 @@
-# Configrrr <sup>v1.0.4-dev</sup>
+# Configrrr <sup>v2.0.0</sup>
 
 :angry: Angry configuration for your JS (grrr...)
 
 Automatically overrides your config values with environment variables, command line switches, and local storage.
 
 - :timer_clock: Simple setup, minimal configuration
-- :hatched_chick: No dependencies, 846 bytes (minified + gzip)
+- :hatched_chick: No dependencies, 881 bytes (minified + gzip)
 
 # Installation
 
