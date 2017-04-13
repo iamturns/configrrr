@@ -5,6 +5,7 @@ export class Config {
 
 	constructor(initConfig) {
 		this.keys = Object.keys(initConfig);
+		this.keysSafePrefix = this.keys.map(k => `CONFIG_${k}`);
 		this._baseConfig = this._calculateBaseConfig(initConfig);
 		this._setConfig = {};
 		this._defineProperties();
@@ -25,8 +26,8 @@ export class Config {
 		return Object.assign(
 			{},
 			initConfig,
-			getEnvVars(this.keys),
-			getArgVals(this.keys)
+			getEnvVars(this.keysSafePrefix),
+			getArgVals(this.keysSafePrefix)
 		);
 	}
 
