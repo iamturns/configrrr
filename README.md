@@ -27,7 +27,7 @@ const config = new Config({
 
 ```javascript
 // Override with an environment variable
-env angry=true npm start
+angry=true npm start
 
 // Override with a command switch
 npm start --angry true
@@ -66,6 +66,11 @@ localStorage.angry = '2nd priority';
 npm start --angry '3rd priority'
 
 // #4. Environment variable
+// Linux, macOS (Bash):
+angry='4th priority' npm start
+// Windows (cmd.exe):
+set angry='4th priority' && npm start
+// Fish shell:
 env angry='4th priority' npm start
 
 // #5. Initial config
