@@ -19,63 +19,67 @@ npm install configrrr
 import { Config } from 'configrrr';
 
 const config = new Config({
-	appName: 'Example',
-	angry: false,
-	portNumber: 3000,
+	APP_NAME: 'Example',
+	ANGRY: false,
+	PORT_NUMBER: 3000,
 });
 ```
 
 ```javascript
 // Override with an environment variable
-angry=true npm start
+CONFIG_ANGRY=true npm start
 
 // Override with a command switch
-npm start --angry true
+npm start --CONFIG_ANGRY true
 
 // Override 'on the fly' within the browser
-localStorage.angry = true;
+localStorage.ANGRY = true;
 
 // Override by hard coding
-config.angry = true;
+config.ANGRY = true;
 ```
 
 ```javascript
-console.log(config.angry);
+console.log(config.ANGRY);
 // true
 
 console.log(config.toJSON());
-// { appName: 'Example', angry: true, portNumber: 3000 }
+// { APP_NAME: 'Example', ANGRY: true, PORT_NUMBER: 3000 }
 
-console.log(config.hasOwnProperty('doesNotExist'));
+console.log(config.hasOwnProperty('DOES_NOT_EXIST'));
 // false
 
 console.log(config.keys);
-// [ 'appName', 'angry', 'portNumber' ]
+// [ 'APP_NAME', 'ANGRY', 'PORT_NUMBER' ]
 ```
 
 ## Config override priority
 
 ```javascript
 // #1. Hard coded
-config.angry = '1st priority';
+config.ANGRY = '1st priority';
 
 // #2. Local storage
-localStorage.angry = '2nd priority';
+localStorage.ANGRY = '2nd priority';
 
 // #3. Command switch
-npm start --angry '3rd priority'
+npm start --CONFIG_ANGRY '3rd priority'
 
 // #4. Environment variable
 // Linux, macOS (Bash):
-angry='4th priority' npm start
+CONFIG_ANGRY='4th priority' npm start
 // Windows (cmd.exe):
-set angry='4th priority' && npm start
+set CONFIG_ANGRY='4th priority' && npm start
 // Fish shell:
-env angry='4th priority' npm start
+env CONFIG_ANGRY='4th priority' npm start
 
 // #5. Initial config
-new Config({ angry: '5th priority' })
+new Config({ ANGRY: '5th priority' })
 ```
+
+## CONFIG_ prefix
+
+Notice the environment variables and command switches are prefixed with `CONFIG_`. This is to avoid accidentally exposing sensitive information to the client.
 
 ## Usage without ES6 module support
 
