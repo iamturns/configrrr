@@ -1,4 +1,4 @@
-# Configrrr <sup>v2.0.0</sup>
+# Configrrr <sup>v2.0.1</sup>
 
 :angry: Angry configuration for your JS (grrr...)
 
@@ -25,7 +25,7 @@ const config = new Config({
 });
 ```
 
-```javascript
+```
 // Override with an environment variable
 CONFIG_ANGRY=true npm start
 
@@ -55,7 +55,7 @@ console.log(config.keys);
 
 ## Config override priority
 
-```javascript
+```
 // #1. Hard coded
 config.ANGRY = '1st priority';
 
@@ -86,15 +86,15 @@ Notice the environment variables and command switches are prefixed with `CONFIG_
 ```javascript
 // CommonJS / Node.js
 const configrrr = require('configrrr');
-const config = new configrrr.Config({ test: true });
+const config = new configrrr.Config({ TEST: true });
 
 // AMD / RequireJS 
 define(['configrrr'], function(configrrr) {
-	const config = new configrrr.Config({ test: true });
+	const config = new configrrr.Config({ TEST: true });
 });
 
 // Global / window
-const config = new configrrr.Config({ test: true });
+const config = new configrrr.Config({ TEST: true });
 ```
 
 # Use Case: Layered environment config files
@@ -109,16 +109,16 @@ Provide the following directory structure:
 
 ```javascript
 // /app/config/config.default.js
-module.exports = { apiUrl: undefined };
+module.exports = { API_URL: undefined };
 
 // /app/config/config.env-dev.js
-module.exports = { apiUrl: 'http://dev.example.com/' };
+module.exports = { API_URL: 'http://dev.example.com/' };
 
 // /app/config/config.env-prod.js
-module.exports = { apiUrl: 'http://api.example.com/' };
+module.exports = { API_URL: 'http://api.example.com/' };
 
 // /app-config.local.js
-module.exports = { apiUrl: 'http://localhost:1234/' };
+module.exports = { API_URL: 'http://localhost:1234/' };
 ```
 
 ```javascript
@@ -143,7 +143,7 @@ export const config = new Config(initConfig);
 
 import { config } from '/app/config/';
 
-console.log(config.apiUrl);
+console.log(config.API_URL);
 ```
 
 # Notes
@@ -162,13 +162,13 @@ console.log(config.apiUrl);
 
 - Unit tests
 - Improve boolean switches (`--example` instead of `--example true`)
-- TypeScript definition files
-- Support `npm config` settings
+- TypeScript definition file
+- Support for [dotenv](https://www.npmjs.com/package/dotenv)
 
 # Author
 
-[Matthew Turnbull](http://turnbullm.com) <[turnbullm@gmail.com](mailto:turnbullm@gmail.com)>
+[Matt Turnbull](https://iamturns.com) <[matt@iamturns.com](mailto:matt@iamturns.com)>
 
 # License
 
-Open sourced under the [MIT license](http://turnbullm.mit-license.org/).
+Open sourced under the MIT license.
