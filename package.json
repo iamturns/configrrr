@@ -9,12 +9,12 @@
     "environment"
   ],
   "main": "index.js",
-  "author": "Matthew Turnbull <turnbullm@gmail.com> (http://turnbullm.com)",
+  "author": "Matt Turnbull <matt@iamturns.com> (https://iamturns.com)",
   "license": "MIT",
-  "homepage": "https://github.com/turnbullm/configrrr",
+  "homepage": "https://github.com/iamturns/configrrr",
   "repository": {
     "type": "git",
-    "url": "https://github.com/turnbullm/configrrr.git"
+    "url": "https://github.com/iamturns/configrrr.git"
   },
   "bugs": {
     "url": "https://github.com/turnbullm/configrrr/issues"
